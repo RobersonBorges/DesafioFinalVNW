@@ -8,7 +8,7 @@ import S from "./footer.module.scss";
 export default function Footer() {
   return (
     <footer>
-      <section className={S.footerVNW}>
+      <section className={S.boxSocial}>
         <h3>4002-8922</h3>
         <nav>
           <a href="">

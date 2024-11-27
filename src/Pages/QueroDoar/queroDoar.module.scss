@@ -1,0 +1,31 @@
+.boxPrincipal{
+    border: solid 2px red;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    border: solid 2px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    form{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        border: solid 2px#005695;
+        width: 25vw;
+        height: 70vh;
+        border-radius: 15px;
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+            color: #005695;
+        }
+    }
+}
