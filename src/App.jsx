@@ -1,5 +1,5 @@
 import './global.scss'
-import Header from './components/Header/Header'
+import Header from "./components/Header/header";
 import Footer from './components/Footer/footer'
 
 function App() {
