@@ -19,7 +19,7 @@ export default function QueroDoar() {
           <input type="text" placeholder="Categoria" />
           <input type="text" placeholder="Autor" />
           <input type="text" placeholder="Link da Imagem" />
-          <button> Doar </button>
+          <input type="submit" className={S.doar} value="Doar" />
         </form>
       </section>
     </section>
