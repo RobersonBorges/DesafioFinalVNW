@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     color: white;
-    height: 10vh;
+    height: 15vh;
     background: #005695;
     padding-left: 50px;
     padding-right: 50px;
@@ -21,4 +21,25 @@
     justify-content: center;
     background-color: black;
     color: white;
+    height: 10vh;
+}
+
+@media(max-width: 1000px){
+    .boxSocial{
+        nav{
+            width: 220px
+        }
+    }
+}
+
+@media(max-width: 488px){
+    .boxSocial{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .footerDireitos{
+        p{
+            text-align: center;
+        }
+    }
 }

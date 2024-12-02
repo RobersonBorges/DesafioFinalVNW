@@ -1,4 +1,4 @@
-.header {
+header {
   background: linear-gradient(90deg, #001b2f 0%, #005695 100%);
   display: flex;
   justify-content: space-between;
@@ -30,11 +30,12 @@
     display: flex;
     justify-content: space-around;
     list-style: none;
+    font-size: 20px;
   }
 
   a {
     color: #fff;
-    font-size: 20px;
+    
   }
 }
 
@@ -72,7 +73,6 @@
 
 @media (max-width: 1303px) {
   .logoHeader {
-    border: solid 2px red;
     width: 22vw;
     h1 {
       font-size: 1.8vw;
@@ -84,8 +84,42 @@
   .barraDeBusca {
     input {
       &::placeholder {
-        font-size: 1vw;
+        font-size: 1.1vw;
       }
     }
   }
+  .navHeader{
+    ul{
+     font-size: 1.6vw;
+    }
+  }
+}
+
+@media (max-width: 780px){
+  header{
+    flex-direction: column;
+    height: 25vh;
+    justify-content: space-evenly;
+  }
+  .barraDeBusca{
+    display: none;
+  }
+  .logoHeader{
+    width: 80%;
+    h1{
+      font-size: 25px;
+    }
+    img{
+      width: 80px;
+    }
+  }
+
+  .navHeader{
+    width: 100%;
+    ul{
+      justify-content: space-evenly;
+      font-size: 21px;
+    }
+  }
+
 }
