@@ -1,24 +1,25 @@
 import S from "./doados.module.scss";
-import livro from "../../assets/imgLivroDoados.png";
+import { useEffect, useState } from "react";
+import CardLivros from "./cardLivros";
+import axios from "axios";
 
 export default function Doados() {
-  return (
-    <section className={S.boxDoados}>
-      <h2>Livros Doados</h2>
-      <section className={S.boxCard}>
-        <article>
-          <img src={livro} alt="imagem do livro protagonista" />
-          <h3>O protagonista</h3>
-          <p>Susanne Andrade</p>
-          <p>Ficção</p>
-        </article>
-        <article>
-          <img src={livro} alt="imagem do livro protagonista" />
-          <h3>O protagonista</h3>
-          <p>Susanne Andrade</p>
-          <p>Ficção</p>
-        </article>
-      </section>
-    </section>
-  );
+  const [livros, setLivros] = useState([]);
+
+  const apiURL = "https://apilivrosvnw.onrender.com/livros";
+
+  const obterLivrosDoados = async () => {
+    try {
+      const dataLivros = await axios.get(apiURL);
+      setLivros(dataLivros.data);
+    } catch (error) {
+      console.error("Erro ao obter os livros:", error);
+    }
+  };
+
+  useEffect(() => {
+    obterLivrosDoados();
+  }, []);
+
+  return <CardLivros livros={livros} />;
 }
